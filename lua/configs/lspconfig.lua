@@ -7,14 +7,13 @@ local servers = { "clangd", "pyright", "ruff_lsp", "rust_analyzer" }
 
 local lsp_inlayhints = require "lsp-inlayhints"
 
-
 for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        on_attach = function(client, bufnr)
-            lsp_inlayhints.on_attach(client, bufnr)
-            nvchad_on_attach(client, bufnr)
-        end,
-        on_init = on_init,
-        capabilities = capabilities,
-    }
+  lspconfig[lsp].setup {
+    on_attach = function(client, bufnr)
+      lsp_inlayhints.on_attach(client, bufnr)
+      nvchad_on_attach(client, bufnr)
+    end,
+    on_init = on_init,
+    capabilities = capabilities,
+  }
 end

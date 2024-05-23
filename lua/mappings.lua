@@ -9,10 +9,10 @@ map("n", "<leader><tab>", vim.cmd.NvimTreeToggle)
 
 -- LSP
 map("n", "<leader>fm", function()
-    vim.lsp.buf.format({ async = false })
+  vim.lsp.buf.format { async = false }
 end)
 map("v", "<leader>fm", function()
-    vim.lsp.buf.format({ async = false })
+  vim.lsp.buf.format { async = false }
 end)
 
 -- Trouble
@@ -31,47 +31,47 @@ map("n", "<leader>u", vim.cmd.UndotreeToggle)
 map("n", "<leader>l", vim.cmd.SymbolsOutline)
 
 -- Telescope
-local builtin = require("telescope.builtin")
+local builtin = require "telescope.builtin"
 map("n", "<leader>af", builtin.find_files, {})
 map("n", "<leader>ff", builtin.git_files, {})
 map("n", "<leader>fw", builtin.live_grep, {})
 
 -- Harpoon
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
+local mark = require "harpoon.mark"
+local ui = require "harpoon.ui"
 
 map("n", "<leader>ah", mark.add_file)
 map("n", "<C-e>", ui.toggle_quick_menu)
 
 map("n", "<leader>1", function()
-    ui.nav_file(1)
+  ui.nav_file(1)
 end)
 map("n", "<leader>2", function()
-    ui.nav_file(2)
+  ui.nav_file(2)
 end)
 map("n", "<leader>3", function()
-    ui.nav_file(3)
+  ui.nav_file(3)
 end)
 map("n", "<leader>4", function()
-    ui.nav_file(4)
+  ui.nav_file(4)
 end)
 map("n", "<leader>5", function()
-    ui.nav_file(5)
+  ui.nav_file(5)
 end)
 map("n", "<leader>6", function()
-    ui.nav_file(6)
+  ui.nav_file(6)
 end)
 map("n", "<leader>7", function()
-    ui.nav_file(7)
+  ui.nav_file(7)
 end)
 map("n", "<leader>8", function()
-    ui.nav_file(8)
+  ui.nav_file(8)
 end)
 map("n", "<leader>9", function()
-    ui.nav_file(9)
+  ui.nav_file(9)
 end)
 map("n", "<leader>0", function()
-    ui.nav_file(10)
+  ui.nav_file(10)
 end)
 
 -- Blame

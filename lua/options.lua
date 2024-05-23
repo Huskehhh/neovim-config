@@ -6,7 +6,7 @@ local autocmd = vim.api.nvim_create_autocmd
 
 g.mapleader = " "
 
-o.cursorlineopt = 'both'
+o.cursorlineopt = "both"
 
 o.nu = true
 o.relativenumber = true
@@ -20,7 +20,7 @@ o.wrap = false
 
 o.swapfile = false
 o.backup = false
-o.undodir = os.getenv("HOME") .. "/vim/undodir"
+o.undodir = os.getenv "HOME" .. "/vim/undodir"
 o.undofile = true
 
 o.hlsearch = true
@@ -35,14 +35,14 @@ o.updatetime = 50
 o.colorcolumn = "120"
 
 autocmd("TextYankPost", {
-    desc = "highlight on yank",
-    callback = function()
-        vim.highlight.on_yank({ higroup = "IncSearch", timeout = "200" })
-    end,
+  desc = "highlight on yank",
+  callback = function()
+    vim.highlight.on_yank { higroup = "IncSearch", timeout = "200" }
+  end,
 })
 
 autocmd("VimResized", {
-    desc = "handle vim resizing",
-    pattern = "*",
-    command = "tabdo wincmd =",
+  desc = "handle vim resizing",
+  pattern = "*",
+  command = "tabdo wincmd =",
 })

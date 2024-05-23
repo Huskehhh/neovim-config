@@ -1,94 +1,94 @@
 return {
-    {
-        "stevearc/conform.nvim",
-        event = 'BufWritePre',
-        config = function()
-            require "configs.conform"
-        end,
-    },
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    config = function()
+      require "configs.conform"
+    end,
+  },
 
-    {
-        "neovim/nvim-lspconfig",
-        config = function()
-            require("nvchad.configs.lspconfig").defaults()
-            require "configs.lspconfig"
-        end,
-    },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
+  },
 
-    {
-        "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                "lua-language-server",
-                "stylua",
-                "html-lsp",
-                "css-lsp",
-                "prettier"
-            },
-        },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "stylua",
+        "html-lsp",
+        "css-lsp",
+        "prettier",
+      },
     },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        opts = {
-            ensure_installed = {
-                "vim",
-                "lua",
-                "vimdoc",
-                "html",
-                "css"
-            },
-        },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+      },
     },
+  },
 
-    {
-        "ThePrimeagen/harpoon",
-        lazy = false,
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
+  {
+    "ThePrimeagen/harpoon",
+    lazy = false,
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 
-    {
-        "folke/trouble.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function()
-            require("trouble").setup()
-        end,
-    },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("trouble").setup()
+    end,
+  },
 
-    {
-        "lvimuser/lsp-inlayhints.nvim",
-        lazy = false,
-        config = function()
-            require("configs.inlayhints")
-        end,
-    },
+  {
+    "lvimuser/lsp-inlayhints.nvim",
+    lazy = false,
+    config = function()
+      require "configs.inlayhints"
+    end,
+  },
 
-    {
-        "saecki/crates.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
+  {
+    "saecki/crates.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 
-    {
-        "simrat39/symbols-outline.nvim",
-        lazy = false,
-        config = function()
-            require("symbols-outline").setup()
-        end,
-    },
+  {
+    "simrat39/symbols-outline.nvim",
+    lazy = false,
+    config = function()
+      require("symbols-outline").setup()
+    end,
+  },
 
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        opts = {},
-        config = function()
-            require("ibl").setup()
-        end,
-    },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+    config = function()
+      require("ibl").setup()
+    end,
+  },
 
-    {
-        "j-hui/fidget.nvim",
-        lazy = false,
-        config = function()
-            require("fidget").setup()
-        end,
-    },
+  {
+    "j-hui/fidget.nvim",
+    lazy = false,
+    config = function()
+      require("fidget").setup()
+    end,
+  },
 }
