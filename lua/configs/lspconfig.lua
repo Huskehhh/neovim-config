@@ -3,7 +3,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "clangd", "pyright", "ruff_lsp", "rust_analyzer" }
+local servers = { "clangd", "pyright", "ruff", "rust_analyzer", "biome" }
 
 local lsp_inlayhints = require "lsp-inlayhints"
 
