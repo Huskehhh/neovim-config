@@ -4,6 +4,14 @@ local o = vim.o
 local g = vim.g
 local autocmd = vim.api.nvim_create_autocmd
 
+vim.diagnostic.config {
+  float = {
+    show_header = true,
+    source = "always",
+    border = "rounded",
+  },
+}
+
 g.mapleader = " "
 
 o.cursorlineopt = "both"

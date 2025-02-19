@@ -24,6 +24,9 @@ map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
 map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
 map("n", "gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
 
+map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to prev diagnostic message" })
+
 -- Undo tree
 map("n", "<leader>u", vim.cmd.UndotreeToggle)
 

@@ -55,14 +55,6 @@ return {
   },
 
   {
-    "lvimuser/lsp-inlayhints.nvim",
-    lazy = false,
-    config = function()
-      require "configs.inlayhints"
-    end,
-  },
-
-  {
     "saecki/crates.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
