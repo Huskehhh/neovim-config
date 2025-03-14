@@ -30,6 +30,7 @@ return {
       },
     },
   },
+
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -39,8 +40,15 @@ return {
         "vimdoc",
         "html",
         "css",
+        "rust",
+        "c",
       },
     },
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    lazy = false,
   },
 
   {
